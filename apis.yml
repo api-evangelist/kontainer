@@ -1,0 +1,31 @@
+aid: kontainer
+name: Kontainer DAM & PIM
+description: 'Kontainer DAM & PIM is a company surfaced via the API Evangelist harvest backlog (source:
+  new-submission) and added to the network as a stub for full-pipeline profiling.'
+url: https://raw.githubusercontent.com/api-evangelist/kontainer/refs/heads/main/apis.yml
+x-type: company
+x-source: harvest:new-submission
+x-tier: stub
+x-tier-reason: harvest
+specificationVersion: '0.20'
+created: '2026-10-05'
+modified: '2026-10-05'
+tags:
+- Company
+apis: []
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+common:
+- type: Website
+  url: https://app.kontainer.com/docs?api-docs.json
+- type: Documentation
+  url: https://app.kontainer.com/api/documentation
+x-submission-notes: The submitted URL is the spec, so use https://kontainer.com as the website. The spec's
+  server is relative (/jsonapi/v2 on app.kontainer.com).
+x-submission-probe: docs?api-docs.json 200 (OAS 3.0, 95 paths, server /jsonapi/v2); /api/documentation
+  200; /jsonapi/v2/oauth/token POST 400 unsupported_grant_type (live OAuth server); unauthenticated GET
+  /jsonapi/v2/meta redirects to /login; app host soft-redirects unknown paths to /login.
+x-submitted-by: mf@kontainer.com (apis.io/add, 2026-10-05T08:34:55.125Z)
