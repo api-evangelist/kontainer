@@ -1,0 +1,73 @@
+openapi: 3.1.0
+info:
+  title: Kontainer DAM & PIM API
+  version: '2026-10-05'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-05: 1 operation(s) read from 1 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Kontainer DAM & PIM has published no machine-readable contract
+    that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 1
+    pages-with-code: 0
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-05'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://app.kontainer.com/docs?api-docs.json
+paths:
+  /oauth/token:
+    post:
+      operationId: post_oauth_token
+      tags:
+      - Oauth
+      summary: Issue an access token from client credentials
+      description: 'Issues the access token every other endpoint authenticates with. One grant: `grant_type=client_credentials` — exchanges the
+        `client_id` and `client_secret` created in Settings › Client credentials for an access token. No refresh token is issued. When the token
+        expires, call this endpoint again with the same `client_id` and `client_secret`.'
+      x-source: https://app.kontainer.com/docs?api-docs.json
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostOauthTokenRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostOauthTokenResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostOauthTokenRequest:
+      type: object
+      properties:
+        requestBody:
+          type: object
+          description: 'See component #/components/requestBodies/IssueClientCredentialToken'
+      required:
+      - requestBody
+    PostOauthTokenResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: success
+        '400':
+          type: string
+          description: invalid_request or unauthorized_client
+        '401':
+          type: string
+          description: invalid_client — unknown client id, wrong secret, or a revoked credential
+        '429':
+          type: string
+          description: Too Many Requests
+tags:
+- name: Oauth

@@ -1,0 +1,20 @@
+generated: '2026-10-05'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/kontainer-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on api.kontainer.com, app.kontainer.com, kontainer.com, partner.kontainer.com;
+  verdict gated (https://api.kontainer.com/mcp answered 401: the edge authenticates before it routes, which proves nothing either way). Candidate
+  tools below are derived from the 1 operation(s) in the provider''s own OpenAPI (1 listed); they describe what a server WOULD expose, not one
+  that exists.'
+tools:
+- name: post_oauth_token
+  operationId: post_oauth_token
+  method: POST
+  path: /oauth/token
+  description: Issue an access token from client credentials

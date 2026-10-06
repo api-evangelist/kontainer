@@ -1,31 +1,116 @@
 aid: kontainer
+
 name: Kontainer DAM & PIM
-description: 'Kontainer DAM & PIM is a company surfaced via the API Evangelist harvest backlog (source:
-  new-submission) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cms.kontainer.com/wp-content/uploads/2022/01/Edit_product_PIM_Kontainer.jpg?v=1715170929
+
+description: Kontainer provides a market‑leading Digital Asset Management (DAM) and Product Information Management (PIM) platform. It offers a
+  GDPR‑secure, user‑friendly solution for organizing, sharing, and controlling assets such as images, videos, and brand guidelines. Features include
+  automated workflows, consent and license management, multichannel product data hub, and integrations with CMS, Adobe Creative Cloud, and e‑commerce
+  platforms, serving both internal teams and external partners.
+
 url: https://raw.githubusercontent.com/api-evangelist/kontainer/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-05 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-05'
+
 modified: '2026-10-05'
+
 tags:
-- Company
-apis: []
+- DAM
+- PIM
+- Digital Asset Management
+- Product Information Management
+- Asset Management
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/kontainer-plans-pricing.yml
+- type: Spectral
+  url: rules/kontainer-rules.yml
+- type: JSONLD
+  url: json-ld/kontainer-context.jsonld
+- type: Vocabulary
+  url: vocabulary/kontainer-vocabulary.yml
+- type: DataModel
+  url: data-model/kontainer-data-model.yml
+- type: Conformance
+  url: conformance/kontainer-conformance.yml
+- type: LLMsTxt
+  url: llms/kontainer-llms.txt
+- type: WellKnown
+  url: well-known/kontainer-well-known.yml
+- type: Hosts
+  url: hosts/kontainer-hosts.yml
+- type: Newsroom
+  url: https://kontainer.com/news
+- type: DomainSecurity
+  url: security/kontainer-domain-security.yml
 - type: Website
-  url: https://app.kontainer.com/docs?api-docs.json
+  url: https://kontainer.com
 - type: Documentation
   url: https://app.kontainer.com/api/documentation
-x-submission-notes: The submitted URL is the spec, so use https://kontainer.com as the website. The spec's
-  server is relative (/jsonapi/v2 on app.kontainer.com).
-x-submission-probe: docs?api-docs.json 200 (OAS 3.0, 95 paths, server /jsonapi/v2); /api/documentation
-  200; /jsonapi/v2/oauth/token POST 400 unsupported_grant_type (live OAuth server); unauthenticated GET
-  /jsonapi/v2/meta redirects to /login; app host soft-redirects unknown paths to /login.
+- type: APIReference
+  url: https://app.kontainer.com/docs?api-docs.json
+- type: GettingStarted
+  url: https://kontainer.com/register
+- type: Support
+  url: https://kontainer.com/contact/
+- type: Pricing
+  url: https://kontainer.com/pricing
+- type: TermsOfService
+  url: https://kontainer.com/terms-and-conditions
+- type: SignUp
+  url: https://kontainer.com/register
+
+apis:
+- aid: kontainer:kontainer-api
+  name: Kontainer DAM & PIM API
+  description: 'Kontainer DAM & PIM API as documented publicly: 1 operations. Contract generated from the documentation by API Evangelist (2026-10-05);
+    not the provider''s own document.'
+  humanURL: https://app.kontainer.com/docs?api-docs.json
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/kontainer-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/kontainer-post-oauth-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/kontainer-post-oauth-token-request-schema.json
+
+x-submission-notes: The submitted URL is the spec, so use https://kontainer.com as the website. The spec's server is relative (/jsonapi/v2 on
+  app.kontainer.com).
+
+x-submission-probe: docs?api-docs.json 200 (OAS 3.0, 95 paths, server /jsonapi/v2); /api/documentation 200; /jsonapi/v2/oauth/token POST 400 unsupported_grant_type
+  (live OAuth server); unauthenticated GET /jsonapi/v2/meta redirects to /login; app host soft-redirects unknown paths to /login.
+
 x-submitted-by: mf@kontainer.com (apis.io/add, 2026-10-05T08:34:55.125Z)
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation is only available as HTML pages without a machine‑readable OpenAPI or other contract.
+  evidence:
+  - url: https://app.kontainer.com/api/documentation
+    status: 200
+  checked: '2026-10-05'
+x-enrichment:
+  date: '2026-10-05'
+  status: enriched
+  artifacts_added: 26
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

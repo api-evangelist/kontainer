@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "@vocab": "https://kontainer.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "kontainer": "https://kontainer.com/schema#",
+    "PostOauthTokenRequest": "kontainer:PostOauthTokenRequest",
+    "requestBody": {
+      "@id": "kontainer:requestBody"
+    },
+    "PostOauthTokenResponse": "kontainer:PostOauthTokenResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Kontainer DAM & PIM API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Kontainer DAM & PIM's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-05) from openapi/_ae-authored/kontainer-openapi-generated.yml.",
+  "dcterms:created": "2026-10-05",
+  "dcterms:source": [
+    "openapi/_ae-authored/kontainer-openapi-generated.yml"
+  ]
+}

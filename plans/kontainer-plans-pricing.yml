@@ -1,0 +1,25 @@
+generated: '2026-10-05'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://kontainer.com/pricing
+sources:
+- https://kontainer.com/pricing
+- https://kontainer.com/pim-incl-dam-pricing.md
+- https://kontainer.com/pricing.md
+name: Kontainer DAM & PIM pricing
+audience: business-product
+pricing_basis: per-seat
+plans:
+- name: Core
+  price_text: $ 500 per. month
+  price: 500
+- name: Professional
+  price_text: $ 695 per. month
+  price: 695
+- name: Premium
+  price_text: $ 1,155 per. month
+  price: 1155
+- name: Enterprise
+  price_text: $ 2,220 per. month
+  price: 2220
+docs: https://kontainer.com/pricing

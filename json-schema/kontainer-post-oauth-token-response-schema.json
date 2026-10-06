@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/kontainer/main/json-schema/kontainer-post-oauth-token-response-schema.json",
+  "title": "PostOauthTokenResponse",
+  "x-generated": "2026-10-05",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/kontainer-openapi-generated.yml#/components/schemas/PostOauthTokenResponse",
+  "type": "object",
+  "properties": {
+    "200": {
+      "type": "string",
+      "description": "success"
+    },
+    "400": {
+      "type": "string",
+      "description": "invalid_request or unauthorized_client"
+    },
+    "401": {
+      "type": "string",
+      "description": "invalid_client — unknown client id, wrong secret, or a revoked credential"
+    },
+    "429": {
+      "type": "string",
+      "description": "Too Many Requests"
+    }
+  }
+}
