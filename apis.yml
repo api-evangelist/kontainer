@@ -78,20 +78,19 @@ common:
   url: https://kontainer.com/register
 
 apis:
-- aid: kontainer:kontainer-api
-  name: Kontainer DAM & PIM API
-  description: 'Kontainer DAM & PIM API as documented publicly: 1 operations. Contract generated from the documentation by API Evangelist (2026-10-05);
-    not the provider''s own document.'
+- aid: kontainer:kontainer-oauth-api
+  name: Kontainer DAM & PIM OAuth API
+  description: The Oauth API from Kontainer DAM & PIM — 1 operation(s) for oauth.
   humanURL: https://app.kontainer.com/docs?api-docs.json
+  tags:
+  - Oauth
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/kontainer-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/kontainer-oauth-api-openapi.yml
   - type: JSONSchema
     url: json-schema/kontainer-post-oauth-token-response-schema.json
   - type: JSONSchema
     url: json-schema/kontainer-post-oauth-token-request-schema.json
-
 x-submission-notes: The submitted URL is the spec, so use https://kontainer.com as the website. The spec's server is relative (/jsonapi/v2 on
   app.kontainer.com).
 
